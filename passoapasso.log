@@ -1,0 +1,29 @@
+-  instalar o template do desafio a partir do GitHub
+-  yarn add @babel/core @babel/preset-env @babel/preset-react webpack 
+webpack-cli (7:04 - Configurando Babel)
+-  criar na raiz o file+conteúdo: babel.config.js (8:04 - Configurando Babel)
+-  yarn add @babel/cli (ferramentas para console) (11:50 - Configurando Babel)
+-  criar na raiz o file+conteúdo: webpack.config.js (00:05 - Configurando Webpack)
+-  yarn add babel-loader (3:23 - Configurando Webpack)
+-  yarn add webpack-dev-server -D (7:07 - Configurando Webpack)
+-  editar o webpack.config.js, incluir: 
+devServer:{contentBase: path.resolve(__dirname, 'public'),}, (7:20 Configurando Webpack)
+-  yarn webpack-dev-server --mode development => que gerou o seguinte erro aqui:
+
+[./src/index.js] 1.39 KiB {main} [built] [failed] [1 error]
+    + 18 hidden modules
+
+ERROR in ./src/index.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Cannot find module '@babel-preset-env/babel-preset' from '/Users/Dudu/Bootcamp/Desafios/desafio2Reactjs'
+    at Function.resolveSync [as sync] (/Users/Dudu/Bootcamp/Desafios/desafio2Reactjs/node_modules/resolve/lib/sync.js:81:15)
+    at resolveStandardizedName (/Users/Dudu/Bootcamp/Desafios/desafio2Reactjs/node_modules/@babel/core/lib/config/files/plugins.js:101:31)
+    at resolvePreset (/Users/Dudu/Bootcamp/Desafios/desafio2Reactjs/node_modules/@babel/core/lib/config/files/plugins.js:58:10)
+    at loadPreset (/Users/Dudu/Bootcamp/Desafios/desafio2Reactjs/node_modules/@babel/core/lib/config/files/plugins.js:77:20)
+    at createDescriptor (/Users/Dudu/Bootcamp/Desafios/desafio2Reactjs/node_modules/@babel/core/lib/config/config-descriptors.js:154:9)
+    at /Users/Dudu/Bootcamp/Desafios/desafio2Reactjs/node_modules/@babel/core/lib/config/config-descriptors.js:109:50
+    at Array.map (<anonymous>)
+    at createDescriptors (/Users/Dudu/Bootcamp/Desafios/desafio2Reactjs/node_modules/@babel/core/lib/config/config-descriptors.js:109:29)
+    at createPresetDescriptors (/Users/Dudu/Bootcamp/Desafios/desafio2Reactjs/node_modules/@babel/core/lib/config/config-descriptors.js:101:10)
+    at presets (/Users/Dudu/Bootcamp/Desafios/desafio2Reactjs/node_modules/@babel/core/lib/config/config-descriptors.js:47:19)
+ℹ ｢wdm｣: Failed to compile.
